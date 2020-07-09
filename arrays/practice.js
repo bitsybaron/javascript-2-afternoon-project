@@ -18,7 +18,9 @@ var arr = [10,20,30];
 */
 
 //Code Here
-
+let first = (arr) => {
+  return arr[0];
+};
 
 
 ////////// PROBLEM 2 //////////
@@ -33,7 +35,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+let last = (arr) => {
+  return arr[arr.length - 1]
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +52,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+let looper = (family) => {
+  for (let i = 0; i < family.length; i++) {
+    window.alert(family[i])
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -63,7 +71,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+let reversedLooper = (letters) => {
+  for (let i = letters.length - 1; i >= 0; i--) {
+    window.alert(letters[i]);
+  }
+};
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +90,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+let evenFinder = nums => {
+  let newNums = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      newNums.push(nums[i])
+    }
+  }
+  return newNums;
+}
 
 
 
@@ -107,7 +127,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+let divider =(numbersArray) => {
+  let evensArr = [];
+  let oddsArr = [];
+  let newArr = [];
+  for (let i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2 === 0) {
+      evensArr.push(numbersArray[i]);
+    } else {oddsArr.push(numbersArray[i])}
+  }
+  newArr.push(evensArr, oddsArr);
+  return newArr;
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -129,7 +160,14 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-
+const finder = (array) => {
+  let randomNumber = getRandomArbitrary();
+  for (let i = 0; i < array.length; i++) {
+    if (randomNumber === array[i]) {
+      return true;
+    }  {
+      
+    }} return false;}
 
 
 ////////// PROBLEM 8 //////////
@@ -158,8 +196,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+const removeItem = (myGroceryList, x) => {
+  let zArr = [];
+  if (myGroceryList && x) {
+  for (let i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === x) {
+      myGroceryList.splice(myGroceryList[i], 1)
+    }
+  } return myGroceryList;
+  
+} else {return zArr}};
 
-
+const addItem = (myGroceryList, y) => {
+  let bArr = [];
+  if (myGroceryList && y) {
+    myGroceryList.push(y);
+    return myGroceryList;
+  } else {
+    return bArr;
+  }
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -168,7 +224,12 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+let maker = () => {
+  let newArr = [];
+  for (let i = 1; i < 216; i++) {
+    newArr.push(i);
+  } return newArr;
+};
 
 
 ////////// PROBLEM 10 //////////
@@ -184,7 +245,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+const addTen = numbers => {
+  let newArr = [];
+  for (let i = 0; i < numbers.length; i++) {
+    newArr.push(Number(numbers[i]) + 10);
+  }
+  return newArr;
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -209,7 +276,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+let longer = (arr1, arr2) => {
+  if (arr1.length > arr2.length) {
+    return arr1;
+  } else {
+    return arr2;
+  }
+};
 
 
 /*
@@ -221,7 +294,16 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+let both = (arr1, arr2) => {
+  let newArray = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        newArray.push(arr1[i]);
+      }
+    }
+  } return newArray;
+}
 
 
 ////////// PROBLEM 12 //////////
@@ -252,6 +334,7 @@ var colt = {
     position: 'Everything really',
     spiritAnimal: 'Young Male Horse'
 };
+
 // Do not edit the code above.
 
 /*
@@ -262,7 +345,11 @@ var colt = {
 */
 
 //Code Here
-
+let addObj = (a, b, c, d) => {
+  devMountainEmployees.push(a, b, c, d);
+  return devMountainEmployees;
+}
+addObj(joe, cahlan, ryan, colt);
 
 
 /*
@@ -271,8 +358,7 @@ var colt = {
 */
 
 //Code Here
-
-
+devMountainEmployees.splice(1, 1);
 
 ////////// PROBLEM 13 //////////
 
@@ -283,7 +369,7 @@ var colt = {
 */
 
 //Code Here
-
+let users = [];
 
 
 /*
@@ -304,6 +390,23 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+users[0] = user1;
+var user2 = {
+  name: 'Tark McIver',
+  email: 'Tark.mciver@devmounta.in',
+  password: 'thunter2',
+  username: 'tihazcode'
+};
+
+var user3 = {
+  name: 'Sark McIver',
+  email: 'Sark.mciver@devmounta.in',
+  password: 'sunter2',
+  username: 'sihazcode'
+};
+
+users[1] = user2;
+users[2] = user3;
 
 
 
@@ -318,7 +421,11 @@ var user1 = {
 */
 
 //Code Here
-
+for (let i = 0; i < users.length; i++) {
+  if (users[i].email === 'mark.mciver@devmounta.in') {
+    users.splice(users[i].email, 1)
+  }
+};
 
 
 /*
